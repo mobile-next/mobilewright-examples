@@ -1,0 +1,16 @@
+{
+  "name": "android-custom-activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mobilewright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mobilewright/test": "^0.0.43",
+    "mobilewright": "^0.0.43"
+  }
+}
