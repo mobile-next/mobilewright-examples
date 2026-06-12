@@ -1,0 +1,18 @@
+{
+  "name": "mobilewright-examples-webview-and-playwright",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test:playwright": "playwright test",
+    "test:mobilewright": "mobilewright test"
+  },
+  "dependencies": {
+    "@mobilewright/test": "^0.0.42",
+    "mobilewright": "^0.0.42"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
