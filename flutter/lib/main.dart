@@ -224,6 +224,23 @@ class _DemoHomePageState extends State<DemoHomePage> {
               child: const Text('Submit'),
             ),
             const SizedBox(height: 8),
+            // Repro for mobilewright#343: a widget Key only lives in the Dart
+            // widget tree, never in the platform accessibility tree.
+            ElevatedButton(
+              key: const Key('key-only-button'),
+              onPressed: () => setState(() => _status = 'Key-only pressed'),
+              child: const Text('Key only'),
+            ),
+            const SizedBox(height: 8),
+            Semantics(
+              identifier: 'semantics-id-button',
+              child: ElevatedButton(
+                key: const Key('different-key-button'),
+                onPressed: () => setState(() => _status = 'Key+semantics pressed'),
+                child: const Text('Key and Semantics'),
+              ),
+            ),
+            const SizedBox(height: 8),
             // Repro for mobilewright#234: an icon-only clickable child (no
             // text/label) inside a labeled, clickable parent row. UiAutomator
             // reports the "+" as NAF="true" with empty text/content-desc.
