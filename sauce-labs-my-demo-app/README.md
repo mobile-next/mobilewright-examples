@@ -10,6 +10,8 @@ Download the APK and install it on a running emulator:
 ```sh
 curl -LO https://github.com/saucelabs/my-demo-app-android/releases/download/2.3.0/mda-2.3.0-27.apk
 adb install -r mda-2.3.0-27.apk
+adb shell pm grant com.saucelabs.mydemoapp.android android.permission.ACCESS_FINE_LOCATION
+adb shell pm grant com.saucelabs.mydemoapp.android android.permission.ACCESS_COARSE_LOCATION
 ```
 
 On 16 KB page-size emulators, the first launch shows an "Android App Compatibility"
