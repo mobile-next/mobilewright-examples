@@ -1,0 +1,14 @@
+{
+  "name": "sauce-labs-my-demo-app",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@mobilewright/test": "^0.0.60",
+    "@types/node": "^24.13.6",
+    "mobilewright": "^0.0.60",
+    "typescript": "^7.0.2"
+  },
+  "scripts": {
+    "test": "mobilewright test"
+  }
+}
